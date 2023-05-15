@@ -1,0 +1,80 @@
+
+
+                                          Backend for BankApp
+--------------------------------------------------------------------------------------------------------------------------------------------
+                                       NODEJS+  EXPRESS + MONGODB
+                               --------------------------------------       
+                                              
+
+                                 BASIC STEPS
+                          --------------------------
+
+     1 .   creation of package.json file ---- npm init or (npm init -t) 
+
+     2.    create index.js file as entry point of server app.
+
+     3.    Install express ----- npm i express   
+
+     4.    Import express in index.js ------ const express=require("express")      
+
+     5.    Using express create a server application ---express()
+
+     6.    setup port number for server app --server.listen()
+
+     7.    Install cors(cross origin resource sharing ) --- npm i cors -----to share data with different port number
+
+     8.    use cors in server app       
+
+     9.    Parse json data to the js in server app ---use express.json()      
+
+     10.   To resolve client request (get,put,post,delete)
+
+     11.   create DB and collection in MONGODB
+     12.    Database connection with NODEJS server -mongoos(library)
+
+     13.   Install mongoos ----npm i mongoose      
+    
+     14.    create a folder as services
+
+     15.   create a file as db.js in services
+
+     16.   in db.js 
+              
+              1.Import mongoose
+              2.define a connection string between express and mongodb
+              3.create a model and schema for storing data into the database
+              4.export the collection
+
+     17. logic to resolve the client requests -create a new file in services
+          logic.js
+
+
+          1.in logic.js 
+                import db.json
+              -create a arrow function for register and export it       
+
+
+
+      18.   Login integration
+
+             1 create a logic for Login -login()
+             2.login server api call
+             3.testing in postman ok? frontend login servies
+
+
+       19.balance enquiry 
+       Authorization -jsonWebToken -JWT-npm i jsonWebToken
+
+1)Generate a Token -sign()
+using jwt Token ,Generate token for user who logined succesfull
+
+
+
+2)import jwt token in logic.js
+3) Generate a token 
+login=login successfull +sign()
+
+
+
+
+4)to set token in to the local storage
